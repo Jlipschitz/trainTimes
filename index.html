@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Times</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js" integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+ 
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="container">
+                <h1>TRAIN SCHEDULES</h1>
+                <p>See schedule times below:</p>
+                <p>If your train is not listed below please use the second panel to add one.</p>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Current Train Schedule</div>
+            <div class="panel-body">
+                <table class="table" id="trainTable">
+                    <thead>
+                        <tr>
+                            <th>Train Name</th>
+                            <th>Destination</th>
+                            <th>Frequency (min)</th>
+                            <th>Next Arrival</th>
+                            <th>Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">Add Train</div>
+            <div class="panel-body">
+                <form action="" method="POST" role="form">
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="text" class="form-control" id="trainName" placeholder="Golden Express">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="text" class="form-control" id="destination" placeholder="New York">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+                        <input type="text" class="form-control" id="firstTrain" placeholder="05:30">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="number" class="form-control" id="frequency" placeholder="60">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="addNewTrain">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+       <script type="text/javascript" src="javascript.js"></script>
+</body>
+
+</html>
